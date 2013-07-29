@@ -172,7 +172,7 @@
                {{name}}
                <ul>
                   {{#channels}}
-                     <li><a href="/grapher/{{deviceName}}/{{name}}">{{name}}</a></li>
+                     <li><a href="/grapher/{{deviceName}}/{{name}}">{{name}}</a>, <a href="/viz/{{deviceName}}/{{name}}">Visualization</a></li>
                   {{/channels}}
                </ul>
             </li>
