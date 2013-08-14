@@ -20,6 +20,8 @@ exports.visual = function(req, res) {
                                   if (sources[i]['name'] == req.params.deviceNickname) {
                                      // we found the device, so try to find the channel
                                      var channels = sources[i]['channels'];
+
+                                     console.log('sources: ' + JSON.stringify(sources[i]));
                                      for (var j = 0; j < channels.length; j++) {
                                         if (channels[j]['name'] == req.params.channelName) {
                                            selectedDevice = req.params.deviceNickname;
@@ -38,6 +40,8 @@ exports.visual = function(req, res) {
                             }
 
                             if (areDeviceAndChannelValid) {
+                              console.log('channel: ' + JSON.stringify(channel));
+
                                res.render('visual',
                                           {
                                              title : 'Simple Datastore Server',

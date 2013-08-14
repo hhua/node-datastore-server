@@ -16,6 +16,7 @@ app.use(express.methodOverride());
 app.use(express.compress());        // enables gzip compression
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'views')));
 app.set("jsonp callback", true);
 app.set('json spaces',0);           // setting this to 0 removes whitespace from json
 
